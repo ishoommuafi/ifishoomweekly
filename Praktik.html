@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            PRAKTIKUM INFORMATIKA 
+        </title>
+    </head>
+    <body>
+        <h2>Tambah Form</h2>
+        <form action="Praktik.html" method="post">
+            <table cellpadding="5px">
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="nama" name="nama"></td>
+                </tr>
+                <tr>
+                    <td><label for="nim">NIM</label></td>
+                    <td>:</td>
+                    <td><input type="number" id="nim" name="nim"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td>:</td>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="hp">No HP</label></td>
+                    <td>:</td>
+                    <td><input type="tel" id="hp" name="hp"></td>
+                </tr>
+                <tr>
+                    <td><label for="website">Website pribadi</label></td>
+                    <td>:</td>
+                    <td><input type="url" id="website" name="website"></td>
+                </tr>
+                <tr>
+                    <td><label for="tgl_lahir">Tanggal lahir</label></td>
+                    <td>:</td>
+                    <td><input type="date" id="tgl_lahir" name="tgl_lahir"></td>
+                </tr>
+                <tr>
+                    <td><label for="warna">Warna favorit</label></td>
+                    <td>:</td>
+                    <td><input type="color" id="warna" name="warna"></td>
+                </tr>
+                <tr>
+                    <td><label for="kepuasan">Tingkat kepuasan</label></td>
+                    <td>:</td>
+                    <td><input type="range" id="kepuasan" name="kepuasan" min="0" max="10"></td>
+                </tr>
+                <tr>
+                    <td>Jenis kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <label><input type="radio" name="kelamin" value="Laki-laki"> Laki-laki</label><br>
+                        <label><input type="radio" name="kelamin" value="Perempuan"> Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobi</td>
+                    <td>:</td>
+                    <td>
+                        <label><input type="checkbox" name="hobi" value="Membaca"> Membaca</label><br>
+                        <label><input type="checkbox" name="hobi" value="Olahraga"> Olahraga</label><br>
+                        <label><input type="checkbox" name="hobi" value="Memasak"> Memasak</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="foto">Upload foto</label></td>
+                    <td>:</td>
+                    <td><input type="file" id="foto" name="foto"></td>
+                </tr>
+                <tr>
+                    <td><label for="alamat">Alamat</label></td>
+                    <td>:</td>
+                    <td><textarea id="alamat" name="alamat" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="jurusan">Jurusan</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="jurusan" name="jurusan">
+                            <option value="Informatika">Informatika</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Teknik Komputer">Teknik Komputer</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
