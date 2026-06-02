@@ -10,18 +10,18 @@
         <h1>Profile Informatika 2026</h1>
         <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="profile.html">Profile</a></td>
-                <td><a href="contact.html">Contact</a></td>
-                <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="profile.php">Profile</a></td>
+                <td><a href="contact.php">Contact</a></td>
+                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
             </tr>
         </table>
         <hr/>
         <h3>Ini Profile</h3>
         <p><b>Under maintenance</b></p>
         <!-- Internal source -->
-        <a href="Contact.html">Contact</a>
-        <a href="index.html">Index</a>
+        <a href="Contact.php">Contact</a>
+        <a href="index.php">Index</a>
 
         <!-- External source -->
          <a href="https://Youtube.com" target="_blank">Youtube</a>

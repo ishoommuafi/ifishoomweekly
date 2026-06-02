@@ -10,10 +10,10 @@
         <h1>Informatika 2026</h1>
         <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="profile.html">Profile</a></td>
-                <td><a href="contact.html">Contact</a></td>
-                <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="profile.php">Profile</a></td>
+                <td><a href="contact.php">Contact</a></td>
+                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
             </tr>
         </table>
         <hr/>
@@ -38,8 +38,8 @@
             <li>Juara 3 Olimpiade Matematika</li>
         </ul>
         <!-- Internal source -->
-        <a href="profile.html">Profile</a>
-        <a href="contact.html">Contact</a>
+        <a href="profile.php">Profile</a>
+        <a href="contact.php">Contact</a>
 
         <!-- External source -->
          <a href="https://Youtube.com" target="_blank">Youtube</a>

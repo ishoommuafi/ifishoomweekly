@@ -11,15 +11,15 @@
         <h2>Tambah Data Mahasiswa Informatika 2026</h2>
         <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="profile.html">Profile</a></td>
-                <td><a href="contact.html">Contact</a></td>
-                <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="profile.php">Profile</a></td>
+                <td><a href="contact.php">Contact</a></td>
+                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
             </tr>
         </table>
         <hr/>
         <!-- Internal source -->
-        <form action="mahasiswa.html" method="post">
+        <form action="mahasiswa.php" method="post">
             <table cellpadding="5px">
                 <tr>
                     <td><label for="nama">Nama</label></td>
@@ -58,10 +58,10 @@
     </body>
      <table border="1" cellspacing="0" cellpadding="5">
             <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="profile.html">Profile</a></td>
-                <td><a href="contact.html">Contact</a></td>
-                <td><a href="mahasiswa.html">Data Mahasiswa</a></td>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="profile.php">Profile</a></td>
+                <td><a href="contact.php">Contact</a></td>
+                <td><a href="mahasiswa.php">Data Mahasiswa</a></td>
             </tr>
         </table>
 </html>

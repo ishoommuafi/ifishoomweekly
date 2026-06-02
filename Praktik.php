@@ -9,7 +9,7 @@
     </head>
     <body>
         <h2>Tambah Form</h2>
-        <form action="Praktik.html" method="post">
+        <form action="Praktik.php" method="post">
             <table cellpadding="5px">
                 <tr>
                     <td><label for="nama">Nama</label></td>
