@@ -1,3 +1,12 @@
+<?php
+    require "fungsi.php";
+
+    $qmhs = "SELECT * FROM mahasiswa";
+    $mahasiswas = tampildata($qmhs);
+    
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,34 +31,62 @@
         </a>
         <table border="1" cellpadding="10px" >
             <tr>
-                <th rowspan="2">NO</th>
-                <th rowspan="2">NAMA</th>
-                <th rowspan="2">FOTO</th>
-                <th colspan="3">NILAI</th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nim</th>
+                <th>Jurusan</th>
+                <th>Email</th>
+                <th>No. Hp</th>
+                <th>Foto</th>
+                <th>Aksi</th>
             </tr>
+
+            <?php
+                $i = 1;
+                foreach ($mahasiswas as $mhs) 
+                {
+            ?>
+            
             <tr>
-                <th>UTS</th>
-                <th>UAS</th>
-                <th>Tugas</th>
+                <td align="center"><?= $i++; ?></td>
+                <td><?php echo $mhs['nama']; ?></td>
+                <td><?php echo $mhs['nim']; ?></td>
+                <td><?= $mhs['jurusan']; ?></td>
+                <td><?= $mhs['email']?></td>
+                <td><?= $mhs['no_hp']?></td>
+                <td><img src="assets/images/<?= $mhs['foto']?>" alt="foto" width="60px"></td>
+                <td>
+                    <a href="editdata.php">
+                        <button>Edit</button>
+                    </a>
+                    <a href="hapusdata.php">
+                        <button>Hapus</button>
+                    </a>
+                </td>
             </tr>
-            <tr>
-                <td align="center">1</td>
-                <td>Akira Nakai</td>
-                <td><img src="assets/images/foto.jpg" alt="foto" width="60px"></td>
-                <td align="center">80</td>
-                <td align="center">90</td>
-                <td align="center">85</td>
-            </tr>
+            <?php
+                }
+            ?>
             <tr>
                 <td align="center">2</td>
                 <td>Smokey</td>
+                <td>Teknik Informatika</td>
+                <td>smokey@email.com</td>
+                <td>08987654321</td>
                 <td><img src="assets/images/smokey.jpg" alt="foto" width="60px"></td>
-                <td align="center">85</td>
-                <td align="center">95</td>
-                <td align="center">90</td>
+                <td>
+                    <a href="editdata.php">
+                        <button>Edit</button>
+                    </a>
+                    <a href="hapusdata.php">
+                        <button>Hapus</button>
+                    </a>
+                </td>
             </tr>
         </table>
+
         <br>
+
         <h3>Data Diri</h3>
         <table border="1" cellpadding="10px" >
             <tr>
@@ -74,6 +111,7 @@
                 <td>EMAIL</td>
             </tr>
         </table>
+        
         <!-- Internal source -->
         <a href="profile.php">Profile</a>
         <a href="contact.php">Contact</a>

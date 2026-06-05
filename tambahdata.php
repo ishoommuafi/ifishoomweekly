@@ -24,28 +24,32 @@
                 <tr>
                     <td><label for="nama">Nama</label></td>
                     <td>:</td>
-                    <td><input type="text" id="nama" name="nama"></td>
+                    <td><input type="text" id="nama" name="nama" require></td>
+                </tr>
+                <tr>
+                    <td><label for="nim">NIM</label></td>
+                    <td>:</td>
+                    <td><input type="number" id="nim" name="nim" require></td>
+                </tr>
+                <tr>
+                    <td><label for="jurusan">Jurusan</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="jurusan" name="jurusan" require></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="nohp">No. Hp</label></td>
+                    <td>:</td>
+                    <td><input type="number" id="nohp" name="no_hp" require></td>
                 </tr>
                 <tr>
                     <td><label for="foto">Foto</label></td>
                     <td>:</td>
-                    <td><input type="file" id="foto" name="foto"></td>
-                </tr>
-                <tr>
-                    <td><label for="uts">Nilai UTS</label></td>
-                    <td>:</td>
-                    <td><input type="number" id="uts" name="uts"></td>
-                </tr>
-                <tr>
-                    <td><label for="uas">Nilai UAS</label></td>
-                    <td>:</td>
-                    <td><input type="number" id="uas" name="uas"></td>
-                </tr>
-                <tr>
-                    <td><label for="tugas">Nilai Tugas</label></td>
-                    <td>:</td>
-                    <td><input type="number" id="tugas" name="tugas"></td>
-                </tr>
+                    <td><input type="text" id="foto" name="foto"></td>
                 <tr>
                     <td colspan="3" align="center">
                         <button type="submit" value="Submit">
