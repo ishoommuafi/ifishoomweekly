@@ -1,3 +1,43 @@
+<?php
+
+    require "fungsi.php";
+
+    if(isset($_POST["submit"]))
+    {
+        $nama = $_POST["nama"];
+        $nim = $_POST["nim"];
+        $jurusan = $_POST["jurusan"];
+        $email = $_POST["email"];
+        $no_hp = $_POST["no_hp"];
+        $foto = $_POST["foto"];
+
+        $query = "INSERT INTO mahasiswa
+        (nama,nim,jurusan,email,no_hp,foto) VALUES 
+        ('$nama', '$nim', '$jurusan', '$email', '$no_hp', '$foto')";
+        mysqli_query($koneksi,$query);
+
+        if(mysqli_affected_rows($koneksi) > 0)
+        {
+            echo "
+                <script>
+                    alert('Data Berhasil Ditambahkan!');
+                    window.location.href = 'mahasiswa.php';
+                </script>
+            ";
+        }
+        else
+        {
+            echo "
+                <script>
+                    alert('Data Gagal Ditambahkan!');
+                    window.location.href = 'tambahdata.php';
+                </script>
+            ";
+        }
+    }
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +59,7 @@
         </table>
         <hr/>
         <!-- Internal source -->
-        <form action="mahasiswa.php" method="post">
+        <form action="" method="post">
             <table cellpadding="5px">
                 <tr>
                     <td><label for="nama">Nama</label></td>
@@ -50,10 +90,11 @@
                     <td><label for="foto">Foto</label></td>
                     <td>:</td>
                     <td><input type="text" id="foto" name="foto"></td>
+                </tr>
                 <tr>
-                    <td colspan="3" align="center">
-                        <button type="submit" value="Submit">
-                            Submit
+                    <td colspan="3" >
+                        <button type="submit" name="submit">
+                            Tambah
                         </button>
                     </td>
                 </tr>

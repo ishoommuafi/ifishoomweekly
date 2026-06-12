@@ -59,41 +59,25 @@
                     <a href="editdata.php">
                         <button>Edit</button>
                     </a>
-                    <a href="hapusdata.php">
+                    <a href="hapusdata.php?id=<?= $mhs['id']; ?>" onclick="return confirm('Yakin ingin menghapus data?');">
                         <button>Hapus</button>
                     </a>
                 </td>
             </tr>
             <?php
-                }
+}
             ?>
-            <tr>
-                <td align="center">2</td>
-                <td>Smokey</td>
-                <td>Teknik Informatika</td>
-                <td>smokey@email.com</td>
-                <td>08987654321</td>
-                <td><img src="assets/images/smokey.jpg" alt="foto" width="60px"></td>
-                <td>
-                    <a href="editdata.php">
-                        <button>Edit</button>
-                    </a>
-                    <a href="hapusdata.php">
-                        <button>Hapus</button>
-                    </a>
-                </td>
-            </tr>
         </table>
 
         <br>
 
         <h3>Data Diri</h3>
-        <table border="1" cellpadding="10px" >
+        <table border="1"  >
             <tr>
-                <th>No</th>
-                <th>NAMA</th>
-                <th>ALAMAT</th>
-                <th>EMAIL</th>
+                <th>1.1</th>
+                <th>1.2</th>
+                <th>1.3</th>
+                <th>1.4</th>
             </tr>
             <tr>
                 <td align="center">1</td>
