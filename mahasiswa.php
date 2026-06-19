@@ -56,7 +56,7 @@
                 <td><?= $mhs['no_hp']?></td>
                 <td><img src="assets/images/<?= $mhs['foto']?>" alt="foto" width="60px"></td>
                 <td>
-                    <a href="editdata.php">
+                    <a href="editdata.php?id=<?= $mhs['id']; ?>">
                         <button>Edit</button>
                     </a>
                     <a href="hapusdata.php?id=<?= $mhs['id']; ?>" onclick="return confirm('Yakin ingin menghapus data?');">

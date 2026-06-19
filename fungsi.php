@@ -14,7 +14,7 @@
         return $rows;
     }
 
-function tambahdata($data)
+function tambahdata($data, $files)
     {
         global $koneksi;
 
@@ -23,14 +23,22 @@ function tambahdata($data)
         $jurusan = htmlspecialchars ($data["jurusan"]);
         $email = htmlspecialchars ($data["email"]);
         $no_hp = htmlspecialchars ($data["no_hp"]);
-        $foto = htmlspecialchars ($data["foto"]);
 
+        $namafoto = $files["name"];
+        $tmpfoto = $files["tmp_name"];
+
+        $newnamefoto = date("YmdHis").$namafoto;
+
+        $path = "assets/images/$newnamafoto";
+
+        if(move_uploaded_file($tmpfoto, $path))
+        {
         $query = "INSERT INTO mahasiswa
-        (nama,nim,jurusan,email,no_hp,foto) VALUES 
-        ('$nama', '$nim', '$jurusan', '$email', '$no_hp', '$foto')";
-
+            (nama,nim,jurusan,email,no_hp,foto) VALUES 
+            ('$nama', '$nim', '$jurusan', '$email', '$no_hp', '$newnamafoto')";
+        
         mysqli_query($koneksi,$query);
-
+        }
         return mysqli_affected_rows($koneksi);
     }
 
@@ -43,4 +51,29 @@ function hapusdata($id)
         return mysqli_affected_rows($koneksi);
     }
 
+function editdata($data, $id)
+    {
+        global $koneksi;
+
+        $nama = htmlspecialchars ($data["nama"]);
+        $nim = htmlspecialchars ($data["nim"]);
+        $jurusan = htmlspecialchars ($data["jurusan"]);
+        $email = htmlspecialchars ($data["email"]);
+        $no_hp = htmlspecialchars ($data["no_hp"]);
+        $foto = htmlspecialchars ($data["foto"]);
+
+        $query = "UPDATE mahasiswa SET
+                    nama = '$nama',
+                    nim = '$nim',
+                    jurusan = '$jurusan',
+                    email = '$email',
+                    no_hp = '$no_hp',
+                    foto = '$foto'
+                WHERE id = $id
+                ";
+
+        mysqli_query($koneksi,$query);
+
+        return mysqli_affected_rows($koneksi);
+    }
 ?>

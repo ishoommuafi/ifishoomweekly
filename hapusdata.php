@@ -4,10 +4,7 @@
 
     $id = $_GET["id"];
 
-    $query = "DELETE FROM mahasiswa WHERE id = $id";
-    mysqli_query($koneksi, $query);
-
-    if (mysqli_affected_rows($koneksi) > 0) 
+    if (hapusdata($id) > 0) 
     {
         echo "
             <script>
