@@ -76,4 +76,47 @@ function editdata($data, $id)
 
         return mysqli_affected_rows($koneksi);
     }
-?>
+
+function register($data)
+    { 
+        global $koneksi;
+
+        $username = stripslashes($data["username"]);
+        $password1 = mysqli_real_escape_string($koneksi, $data["password1"]);
+        $password2 = mysqli_real_escape_string($koneksi, $data["password2"]);
+
+        if($password1 != $password2)
+            {   
+                echo "<script>
+                        alert('konfirmasi password tidak sesuai');
+                    </script>";
+                return false;
+            }
+        //// enkripsi password
+        $password_hash = password_hash($password1, PASSWORD_DEFAULT);
+
+        $query = "INSERT INTO user (username, password) VALUES
+        ('$username', '$password_hash')";
+
+        mysqli_query($koneksi, $query);
+        return mysqli_affected_rows($koneksi);
+    }
+
+function login($data)
+{
+    global $koneksi;
+
+    $username = mysqli_real_escape_string($koneksi, strtolower($data["username"]));
+    $password = mysqli_real_escape_string($koneksi, $data["password"]);
+
+    $result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$username'");
+
+    if (mysqli_num_rows($result) === 1) {
+        $row = mysqli_fetch_assoc($result);
+        if (password_verify($password, $row["password"])) {
+            return $row;
+        }
+    }
+    return false;
+}
+?>"
